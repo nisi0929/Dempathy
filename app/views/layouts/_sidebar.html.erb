@@ -1,0 +1,12 @@
+  <div class="text-center bg-amber-200 col-span-3">
+    <h1 class="py-20">Dempathy</h1>
+    <%= link_to "ユーザ一覧", users_path, class:"py-3 block" %>
+    <%= link_to "新規登録", new_user_registration_path, class:"py-3 block" %>
+    <%= link_to "登録編集", edit_user_registration_path, class:"py-3 block" %>
+    <%= link_to "ログイン", user_session_path, class:"py-3 block" %>
+    <div class="text-center py-3 ">
+      <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+    </div>
+
+
+  </div>
