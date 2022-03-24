@@ -6,16 +6,35 @@
 #
 one:
   id: 1
-  name: kengo
-  image: image112
-  description: description112
-  email: kulutoga999@gmail.com
-  encrypted_password: kuluken11
+  name: ruby
+  email: ruby1@user.com
+  encrypted_password: ruby1user
+  image: rubyのimage
+  description: rubyは動的型付け言語です
+  admin: false
 
 two:
-  id: 2
-  name: subkengo
-  image: image111
-  description: description111
-  email: tekitou@tek.com
-  encrypted_password: tekitoupass
+  name: go
+  email: go1@user.com
+  encrypted_password: go1user
+  image: goのimage
+  description: goは最近人気の言語
+  admin: false
+
+three:
+  name: JavaScript
+  email: js1@user.com
+  encrypted_password: js1user
+  image: jsのimage
+  description: jsです
+  admin: false
+
+admin:
+  name: adminuser
+  email: admin1@user.com
+  encrypted_password: admin1user
+  image: admin
+  description: adminです
+  admin: true
+
+
