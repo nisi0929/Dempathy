@@ -49,6 +49,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   #   assert_select 'p.user-name', { text: '名前：rubyedit' }
   # end
 
-  test 'able to edit user data by admin' do
+  test '削除が正常にできる' do
+    login_as(@user, scope: :user)
+    assert_no_difference 'User.count' do
+      delete user_registration_path(@user)
+    end
+    redirect_to root_path
   end
 end
