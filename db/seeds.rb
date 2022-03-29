@@ -20,6 +20,7 @@ User.create!(
       image: 'goのimage',
       description: 'goは最近人気の言語',
       admin: false,
+      suitable: true,
     },
     {
       name: 'JavaScript',
@@ -28,6 +29,7 @@ User.create!(
       image: 'jsのimage',
       description: 'jsです',
       admin: false,
+      suitable: true,
     },
     {
       name: 'adminuser',
@@ -36,6 +38,16 @@ User.create!(
       image: 'admin',
       description: 'adminです',
       admin: true,
+      suitable: true,
+    },
+    {
+      name: 'hacker',
+      email: 'hacker1@user.com',
+      password: 'hacker1user',
+      image: 'hacker',
+      description: 'hackerです',
+      admin: false,
+      suitable: false,
     },
   ],
 )

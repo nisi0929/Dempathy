@@ -4,8 +4,10 @@ Rails.application.routes.draw do
                registrations: 'users/registrations',
                sessions: 'users/sessions',
              }
-  resources :users, only: %i[index show]
   devise_scope :user do
     root 'users#index'
+  end
+  resources :users, only: %i[index show] do
+    collection { get :administrator }
   end
 end

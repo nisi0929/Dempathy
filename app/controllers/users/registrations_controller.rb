@@ -21,11 +21,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   # DELETE /resource
   def destroy
-    # adminuserは他のユーザーも削除できるようにする
-    # if current_user == resource && current_user.admin?
-    #   User.find(params[:id]).destroy
-    #   redirect_to root_path
-    # end
     super
   end
   # GET /resource/cancel

@@ -42,18 +42,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   # パスワードがハッシュ化されるから？？
 
   # test 'unable to edit user data by admin' do
-  #   login_as(@other_user, scope: :user)
+  #   login_as(@user, scope: :user)
   #   get edit_user_registration_path(@user)
   #   patch user_registration_path(@user), params: { user: { name: 'rubyedit' } }
   #   get user_path(@user)
   #   assert_select 'p.user-name', { text: '名前：rubyedit' }
   # end
-
-  test '削除が正常にできる' do
-    login_as(@user, scope: :user)
-    assert_no_difference 'User.count' do
-      delete user_registration_path(@user)
-    end
-    redirect_to root_path
-  end
 end

@@ -13,6 +13,8 @@
 </head>
 
 <body class="grid grid-cols-12 bg-amber-100">
+  <%= flash[:notice] %>
+  <%= flash[:notice] %>
   <%= render partial: 'layouts/sidebar'%>
   <div class="col-span-9 text-center m-10">
     <% if user_signed_in? %>

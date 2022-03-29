@@ -7,6 +7,7 @@
     <p><%= user.image %></p>
     <p><%= user.description %></p>
     <%= link_to "編集", edit_user_registration_path(user)%>
+    <%= link_to "詳細", user_path(user)%>
     <%= button_to "アカウントの削除", registration_path(user), method: :delete %>
   </div>
 

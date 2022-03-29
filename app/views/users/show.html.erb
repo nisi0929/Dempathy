@@ -1,8 +1,15 @@
 <h1>詳細ページ</h1>
 
 <div class=" py-5 px-2 shadow-md mt-10">
+
+    <% if @user.admin === true %>
+    <p>userはいません</p>
+    <% else %>
     <p class="user-name">名前：<%= @user.name %></p>
     <p>メールアドレス：<%= @user.email %></p>
     <p>画像：<%= @user.image %></p>
     <p>説明：<%= @user.description %></p>
+    <% end %>
+
+
 </div>
