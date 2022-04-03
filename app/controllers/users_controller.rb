@@ -20,12 +20,29 @@ class UsersController < ApplicationController
 
   def administrator
     @unsuitable_user = User.where(suitable: false)
-    @suitable_user = User.where.not(admin: true)
+    @suitable_user = User.where.not(admin: true).where.not(suitable: false)
   end
 
   # administratorで実行する削除メソッド
   def destroy_by_admin
     @user = User.find(params[:id])
     @user.destroy
+    redirect_to administrator_users_path
+  end
+
+  def change_suitable
+    @user = User.find(params[:id])
+    if @user.suitable == true
+      @user.update_attribute(:suitable, false)
+    else
+      @user.update_attribute(:suitable, true)
+    end
+    redirect_to administrator_users_path
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:suitable)
   end
 end

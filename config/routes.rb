@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     root 'users#index'
   end
   resources :users, only: %i[index show] do
-    member { delete :destroy_by_admin }
+    member do
+      delete :destroy_by_admin
+      patch :change_suitable
+    end
     collection { get :administrator }
   end
 end
