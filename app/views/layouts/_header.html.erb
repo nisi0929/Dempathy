@@ -1,0 +1,19 @@
+  <div class="text-center grid grid-cols-8 basic-color text-white">
+    <div class="grid grid-cols-3 col-span-2">
+      <div class="text-center justify-center">
+        <%= image_tag 'Logo.svg', class:"w-10 m-auto my-10"%>
+      </div>
+      <h1 class="flex items-center justify-left ont-extrabold text-3xl">Dempathy</h1>
+    </div>
+    <div class="col-span-3 col-start-7 flex items-center justify-center">
+      <%= link_to "ユーザ一覧", users_path, class:"px-3" %>
+      <% if user_signed_in? %>
+      <%= link_to "登録編集", edit_user_registration_path, class:"px-3" %>
+      <%= button_to "ログアウト", destroy_user_session_path, class:"px-3", method: :delete %>
+      <% else %>
+      <%= link_to "新規登録", new_user_registration_path, class:"px-3" %>
+      <%= link_to "ログイン", user_session_path, class:"px-3" %>
+      <% end %>
+    </div>
+
+  </div>

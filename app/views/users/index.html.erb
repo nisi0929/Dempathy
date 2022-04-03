@@ -1,16 +1,22 @@
-<h1 class="my-10">サークル一覧</h1>
+<div class="text-center">
+  <h1 class="my-10">サークル一覧</h1>
 
-<div class=" grid grid-cols-3">
-  <% @users.each do |user| %>
-  <div class=" py-5 px-2 shadow-md">
-    <p>メールアドレス：<%= user.email %></p>
-    <p><%= user.image %></p>
-    <p><%= user.description %></p>
-    <%= link_to "編集", edit_user_registration_path(user)%>
-    <%= link_to "詳細", user_path(user)%>
-    <%= button_to "アカウントの削除", registration_path(user), method: :delete %>
+  <div class="grid grid-cols-3 m-10 gap-5">
+    <% @users.each do |user| %>
+    <div class=" py-5 px-2 shadow-md">
+      <div class="image bg-slate-800 w-full h-40">
+      </div>
+      <p class="text-center text-2xl my-10"><%= link_to user.name , user_path(user) %></p>
+      <div class="grid grid-cols-3">
+        <%= link_to "編集", edit_user_registration_path(user)%>
+        <%= link_to "詳細", user_path(user)%>
+        <%= button_to "アカウントの削除", registration_path(user), method: :delete %>
+      </div>
+    </div>
+
+
+    <% end %>
   </div>
 
 
-  <% end %>
 </div>

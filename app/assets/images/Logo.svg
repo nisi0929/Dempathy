@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 29 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1608.01,-158.772)">
+        <g transform="matrix(1,0,0,1,1047,-391.228)">
+            <g id="ロゴ" transform="matrix(0.706644,-0.70757,0.70757,0.706644,-799.792,724.847)">
+                <g transform="matrix(0.15,0,0,0.15,904,748)">
+                    <circle cx="1210" cy="810" r="50" style="fill:white;"/>
+                </g>
+                <g transform="matrix(0.638298,0,0,0.638298,378.106,317.213)">
+                    <g transform="matrix(1,9.71445e-17,-9.71445e-17,1,30,10)">
+                        <rect x="1080" y="820" width="10" height="30" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(0.000188367,-1,1,0.000188367,252.797,1956.91)">
+                        <rect x="1080" y="820" width="10" height="30" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(0.70751,0.706703,-1.23359,1.235,1350.39,-952.989)">
+                        <rect x="1080" y="820" width="10" height="30" style="fill:white;"/>
+                    </g>
+                </g>
+                <g transform="matrix(0.125,0,0,0.125,947,761)">
+                    <circle cx="1100" cy="860" r="60" style="fill:rgb(164,54,255);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
