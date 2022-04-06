@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :check_admin, only: %i[administrator destroy_by_admin]
+  before_action :check_admin,
+                only: %i[administrator destroy_by_admin change_suitable]
 
   # before Action
   def check_admin
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
     end
   end
 
+  # action
   def index
     @users = User.where.not(admin: true).where.not(suitable: false)
   end

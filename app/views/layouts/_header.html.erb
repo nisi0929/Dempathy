@@ -10,10 +10,15 @@
       <% if user_signed_in? %>
       <%= link_to "登録編集", edit_user_registration_path, class:"px-3" %>
       <%= button_to "ログアウト", destroy_user_session_path, class:"px-3", method: :delete %>
+      <% if current_user.admin == true %>
+      <%= link_to "adminuser", administrator_users_path %>
+      <% end %>
       <% else %>
       <%= link_to "新規登録", new_user_registration_path, class:"px-3" %>
       <%= link_to "ログイン", user_session_path, class:"px-3" %>
       <% end %>
+
+
     </div>
 
   </div>
