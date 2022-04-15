@@ -44,6 +44,11 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# 画象アップロード
+gem 'image_processing'                 # (サイズ変更など)画像処理用
+gem 'cloudinary', require: true        # Cloudinary
+gem 'activestorage-cloudinary-service' # Cloudinary と Active Storage の連携をする
+gem 'active_storage_validations'       # 画像ファイルのバリデーション用
 # Use Sass to process CSS
 # gem "sassc-rails"
 
