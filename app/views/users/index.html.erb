@@ -4,8 +4,13 @@
   <div class="grid grid-cols-3 m-10 gap-5">
     <% @users.each do |user| %>
     <div class=" py-5 px-2 shadow-md">
+      <% if user.image.attached? %>
+      <%= image_tag(user.image)%>
+      <% else %>
       <div class="image bg-slate-800 w-full h-40">
       </div>
+      <% end %>
+
       <p class="text-center text-2xl my-10"><%= link_to user.name , user_path(user) %></p>
       <p class=" my-10"><%= user.description %></p>
       <div class="grid grid-cols-1">
