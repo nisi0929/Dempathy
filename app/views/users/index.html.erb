@@ -7,8 +7,7 @@
       <% if user.image.attached? %>
       <%= image_tag(user.image)%>
       <% else %>
-      <div class="image bg-slate-800 w-full h-40">
-      </div>
+      <div class="image bg-slate-800 w-full h-40"></div>
       <% end %>
 
       <p class="text-center text-2xl my-10"><%= link_to user.name , user_path(user) %></p>

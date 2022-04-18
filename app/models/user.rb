@@ -16,10 +16,10 @@ class User < ApplicationRecord
             },
             dimension: {
               width: {
-                max: 2000,
+                max: 3000,
               },
               height: {
-                max: 2000,
+                max: 3000,
               },
             }
 end
