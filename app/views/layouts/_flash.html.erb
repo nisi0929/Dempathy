@@ -1,0 +1,5 @@
+<div>
+    <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class:"#{key} bg-red p-10 text-center")%>
+    <% end %>
+</div>
