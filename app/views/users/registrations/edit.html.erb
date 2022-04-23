@@ -49,5 +49,5 @@
   <%= f.submit "編集完了", class: "cursor-pointer"%>
 </div>
 <% end %>
-<%= button_to "アカウントの削除", registration_path(resource_name), class:"my-10", data: { confirm: "本当によろしいですか" }, method: :delete %>
+<%= button_to "アカウントの削除", registration_path(resource_name),method: :delete, form: { data: { turbo_confirm: "本当によろしいですか" } }, class:"my-10" %>
 <%= link_to "戻る", :back %>

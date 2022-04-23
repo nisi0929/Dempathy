@@ -14,12 +14,7 @@
 
 <body>
   <%= render partial: 'layouts/header'%>
-  <% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-  <% end %>
+  <%= render partial: "layouts/flash" %>
   <div class="text-center">
     <%= yield %>
   </div>

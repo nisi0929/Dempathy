@@ -7,15 +7,24 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
   # POST /resource/sign_in
-  def create
-    super
-
-    binding.pry
-  end
-  # DELETE /resource/sign_out
-  # def destroy
+  # def create
   #   super
   # end
+  # DELETE /resource/sign_out
+  def destroy
+    signed_out =
+      (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+    set_flash_message! :notice, :signed_out if signed_out
+    yield if block_given?
+    respond_to do |format|
+      format.all { head :no_content }
+      format.any(*navigational_formats) do
+        redirect_to after_sign_out_path_for(resource_name),
+                    status: :see_other,
+                    notice: find_message(:signed_out)
+      end
+    end
+  end
   # protected
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params

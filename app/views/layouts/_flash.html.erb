@@ -1,5 +1,13 @@
-<div>
-    <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class:"#{key} bg-red p-10 text-center")%>
+<div class="text-center">
+    <% if notice %>
+    <div class=" bg-lime-400 mx-24 my-10 py-5 shadow-2xl rounded-md">
+        <p class="alert alert-notice"><%= notice %></p>
+    </div>
+
+    <% end %>
+    <% if alert %>
+    <div class=" bg-orange-400 mx-24 my-10 py-5 shadow-2xl rounded-md">
+        <p class="alert alert-error"><%= alert %></p>
+    </div>
     <% end %>
 </div>
