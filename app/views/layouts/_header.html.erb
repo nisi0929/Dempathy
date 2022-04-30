@@ -5,13 +5,16 @@
       </div>
       <h1 class="flex items-center justify-left ont-extrabold text-3xl">Dempathy</h1>
     </div>
-    <div class="col-span-3 col-start-7 flex items-center justify-center">
+    <div class="col-span-3 col-start-6 flex items-center justify-center">
       <%= link_to "ユーザ一覧", users_path, class:"px-3" %>
       <% if user_signed_in? %>
       <%= link_to "登録編集", edit_user_registration_path, class:"px-3" %>
       <%= button_to "ログアウト", destroy_user_session_path, class:"px-3", method: :delete %>
       <% if current_user.admin == true %>
-      <%= link_to "adminuser", administrator_users_path %>
+      <%= link_to "adminuser", administrator_users_path, class:"px-3" %>
+      <%= link_to "admin post投稿", new_admin_post_path, class:"px-3" %>
+      <%= link_to "admin post一覧", admin_posts_path, class:"px-3" %>
+
       <% end %>
       <% else %>
       <%= link_to "新規登録", new_user_registration_path, class:"px-3" %>

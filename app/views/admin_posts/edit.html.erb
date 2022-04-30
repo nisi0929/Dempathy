@@ -1,0 +1,10 @@
+<div>
+  <h1 class=" font-extrabold text-3xl my-4">[<%=@post.title%>]編集</h1>
+</div>
+<%= form_with model:@post, url:admin_post_path, local: true do |f| %>
+<div class=" grid grid-cols-1 text-center mx-40">
+  <%= f.text_field :title, placeholder: "title", class: "search-input mt-10"%>
+  <%= f.text_area :content, placeholder: "content", class: "search-input my-10"%>
+  <%= f.submit "admin-post" %>
+</div>
+<% end %>
