@@ -1,6 +1,11 @@
 <div class="text-center">
-  <h1 class="my-10">サークル一覧</h1>
 
+  <h1 class="my-10">サークル一覧</h1>
+  <%= form_tag users_path, method: :get, data: {turbo_frame: :users} do %>
+  <%= text_field_tag :q, params[:q],autofocus: true, oninput: "requestSubmit()" %>
+  <% end %>
+
+  <%= turbo_frame_tag :users do %>
   <div class="grid grid-cols-3 m-10 gap-5">
     <% @users.each do |user| %>
     <div class=" py-5 px-2 shadow-md">
@@ -24,6 +29,8 @@
     </div>
     <% end %>
   </div>
+  <% end %>
+  <%= paginate @users %>
 
 
 </div>

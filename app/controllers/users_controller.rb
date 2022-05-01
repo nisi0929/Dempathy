@@ -13,7 +13,13 @@ class UsersController < ApplicationController
 
   # action
   def index
-    @users = User.where.not(admin: true).where.not(suitable: false)
+    basic_users = User.where.not(admin: true).where.not(suitable: false)
+    @users =
+      if params[:q]
+        basic_users.where('name LIKE ?', "%#{params[:q]}%").page(params[:page])
+      else
+        basic_users.page(params[:page])
+      end
   end
 
   def show
